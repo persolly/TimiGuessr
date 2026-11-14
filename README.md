@@ -31,8 +31,8 @@ player actually earned.
 
 1. **Start** — begin a game from the start screen.
 2. **Guess** — a photo is shown for 60 seconds. Click the map to place a pin, then confirm.
-3. **Reveal** — the true location is shown, points are awarded, and the earned part of the
-   story is unlocked.
+3. **Reveal** — the true location is drawn on the map with a line from the guess, points are
+   awarded, and the earned part of the story is unlocked.
 4. **Repeat** — five rounds, each with a new location.
 5. **Results** — total score out of 25,000, a per-round breakdown, an earned-info recap,
    and the option to save the score to the leaderboard.
@@ -47,21 +47,23 @@ placed on the map. If no pin was placed, the round scores zero points.
 Points are based on the distance between the guess and the real location:
 
 ```js
-distance = haversine(guess, truth)          // meters
-points   = Math.round(5000 * Math.exp(-distance / 1000))
+distance  = haversine(guess, truth)                 // meters
+effective = Math.max(0, distance - 200)             // 200 m tolerance
+points    = Math.round(5000 * Math.exp(-effective / 1000))
 ```
 
 - Maximum per round: **5,000**
 - Maximum per game: **25,000**
-- The score decays exponentially with distance
+- Guesses within **200 m** score the maximum
+- Beyond that, the score decays exponentially
 
 The same score thresholds drive the learning tiers:
 
 | Tier | Points | Approx. distance | Story shown |
 |---|---|---|---|
-| Close | ≥ 3000 | ≤ 450 m | Full story, neighborhood, photo credit |
-| Medium | ≥ 750 | ≤ 2.6 km | First sentence only |
-| Far / timeout | < 750 | > 2.6 km | Story locked |
+| Close | ≥ 3000 | ≤ 710 m | Full story, neighborhood, photo credit |
+| Medium | ≥ 750 | ≤ 2.1 km | First sentence only |
+| Far / timeout | < 750 | > 2.1 km | Story locked |
 
 ---
 
@@ -71,6 +73,7 @@ The same score thresholds drive the learning tiers:
 - Five-round games built from a shuffled deck of locations
 - 60-second round timer with automatic timeout submission
 - Interactive map with distance-based scoring
+- Guess-to-location comparison drawn on the map after confirmation
 - Proximity-gated stories: the closer the guess, the more you learn
 - Results recap limited to the information actually unlocked
 - Persistent top-10 leaderboard in `localStorage`

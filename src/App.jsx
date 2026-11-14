@@ -3,15 +3,14 @@ import spotsData from './data/spots.json' // TEMP: Member C owns the real spots.
 import { roundScore } from './utils/score.js' // TEMP: Member A owns the real score.js
 import StartScreen from './components/StartScreen.jsx'
 import GameRound from './components/GameRound.jsx'
-import RevealCard from './components/RevealCard.jsx'
 import ResultScreen from './components/ResultScreen.jsx'
 
 const TOTAL_ROUNDS = 5
 
 // Proximity-gated learning: the closer the guess, the more info unlocks.
 // Levels: 2 = full info (close), 1 = partial (medium), 0 = minimal (far/timeout).
-// Thresholds follow the scoring decay 5000·e^(-d/1000):
-//   ≥ 3000 pts ≈ up to ~450 m → full, ≥ 750 pts ≈ up to ~2.6 km → partial.
+// A's score is flat 5000 within 200 m, then 5000·e^(-(d-200)/1000):
+//   ≥ 3000 pts ≈ up to ~710 m → full, ≥ 750 pts ≈ up to ~2.1 km → partial.
 const FULL_INFO_PTS = 3000
 const SOME_INFO_PTS = 750
 
@@ -112,15 +111,23 @@ export default function App() {
     }
     case 'reveal': {
       const last = state.guesses[state.guesses.length - 1]
+      // Keep the same GameRound mounted (same component, key and position) so A's
+      // map instance survives and can draw the guess -> truth comparison (A6).
       return (
-        <RevealCard
+        <GameRound
+          key={state.roundIndex}
           spot={last.spot}
-          guess={last.guess}
-          points={last.points}
-          infoLevel={last.infoLevel}
-          totalScore={state.totalScore}
-          isLastRound={state.roundIndex >= state.rounds.length - 1}
-          onNext={nextRound}
+          roundIndex={state.roundIndex}
+          totalRounds={state.rounds.length}
+          onConfirm={handleRoundConfirm}
+          reveal={{
+            guess: last.guess,
+            points: last.points,
+            infoLevel: last.infoLevel,
+            totalScore: state.totalScore,
+            isLastRound: state.roundIndex >= state.rounds.length - 1,
+            onNext: nextRound,
+          }}
         />
       )
     }

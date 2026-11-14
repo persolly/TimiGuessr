@@ -10,22 +10,32 @@ const fmt = (n) => n.toLocaleString('en-US')
 //   level 0 (far / timed out): name only
 // The full story is never lost — the results screen shows the complete tour.
 
-export default function RevealCard({ spot, guess, points, infoLevel, totalScore, isLastRound, onNext }) {
+export default function RevealCard({
+  spot,
+  guess,
+  points,
+  infoLevel,
+  totalScore,
+  isLastRound,
+  onNext,
+  showPhoto = true,
+}) {
   const [photoFailed, setPhotoFailed] = useState(false)
   const facts = getFacts(spot)
 
   return (
     <div className="card reveal-card" data-level={infoLevel}>
       <h2>Round result</h2>
-      {photoFailed ? (
-        <p className="photo-fallback">Photo unavailable.</p>
-      ) : (
-        <img
-          src={spot.photo}
-          alt={spot.name}
-          onError={() => setPhotoFailed(true)}
-        />
-      )}
+      {showPhoto &&
+        (photoFailed ? (
+          <p className="photo-fallback">Photo unavailable.</p>
+        ) : (
+          <img
+            src={spot.photo}
+            alt={spot.name}
+            onError={() => setPhotoFailed(true)}
+          />
+        ))}
       <h3>{spot.name}</h3>
 
       {infoLevel === 2 && (
