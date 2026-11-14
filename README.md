@@ -37,8 +37,8 @@ player actually earned.
 5. **Results** — total score out of 25,000, a per-round breakdown, an earned-info recap,
    and the option to save the score to the leaderboard.
 
-If the timer reaches zero, the round is submitted automatically with no guess and scores
-zero points.
+If the timer reaches zero, the round is submitted automatically using the pin currently
+placed on the map. If no pin was placed, the round scores zero points.
 
 ---
 
@@ -154,6 +154,9 @@ start -> round -> reveal -> round -> ... -> results -> start
 ```
 
 The current round is keyed by its index so the timer resets cleanly between rounds.
+
+The map reports the current pin through `onPinChange({ lat, lng })`. If the 60-second
+timer expires, the round submits that pin (or scores zero when no pin was placed).
 
 ---
 
