@@ -4,7 +4,7 @@
     "name": "Union Square (Piața Unirii)",
     "lat": 45.75760945307555,
     "lng": 21.22901515676035,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/23/Piata_Unirii_Timisoara_20180817_203847_HDR.jpg",
+    "photo": "/photos/spot-1.jpg",
     "attribution": "Photo: Korinna — CC BY-SA 4.0",
     "facts": [
       "Piața Unirii is famous for its beautiful Baroque architecture and colorful buildings, making it one of the most picturesque places in Timișoara.",
@@ -19,7 +19,7 @@
     "name": "Victory Square (Piața Victoriei)",
     "lat": 45.75381400465122,
     "lng": 21.225737254911326,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Pia%C8%9Ba_Victoriei_Timi%C8%99oara.jpg",
+    "photo": "/photos/spot-2.jpg",
     "attribution": "Photo: Marius Catalin Boldeanu — CC BY-SA 4.0",
     "facts": [
       "Piața Victoriei was one of the main places where people gathered to protest against the communist regime in December 1989.",
@@ -33,7 +33,7 @@
     "name": "Liberty Square (Piața Libertății)",
     "lat": 45.75570708572165,
     "lng": 21.22783231258266,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Pia%C8%9Ba_Libert%C4%83%C8%9Bii_Timi%C8%99oara.jpg",
+    "photo": "/photos/spot-3.jpg",
     "attribution": "Photo: Marius Catalin Boldeanu — CC BY-SA 4.0",
     "facts": [
       "In the 18th century, the square was used by Habsburg troops for military gatherings and parades.",
@@ -49,7 +49,7 @@
     "name": "Maria Theresia Bastion (Bastionul „Maria Theresia”)",
     "lat": 45.75743063744872,
     "lng": 21.233983254912218,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Bastion_Theresia_corp_A%2C_B%2C_C%2C_E.jpg",
+    "photo": "/photos/spot-4.jpg",
     "attribution": "Photo: Turbojet — CC BY-SA 4.0",
     "facts": [
       "Built between 1732 and 1734, it was originally used as a military food storage facility, holding supplies such as flour and salt.",
@@ -64,7 +64,7 @@
     "name": "Metropolitan Cathedral (Catedrala Mitropolitană)",
     "lat": 45.75087296663025,
     "lng": 21.22440605860908,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/0/06/Catedrala_Mitropolitan%C4%83_%E2%80%9ESfin%C8%9Bii_Trei_Ierarhi%E2%80%9D.jpg",
+    "photo": "/photos/spot-5.jpg",
     "attribution": "Photo: Choinowski — CC BY-SA 4.0",
     "facts": [
       "The cathedral was completed in 1940 and has 11 towers, including its central tower, which reaches approximately 83 metres in height.",
@@ -78,7 +78,7 @@
     "name": "Timișoara National Museum of Art (Muzeul Național de Artă din Timișoara)",
     "lat": 45.757582564480806,
     "lng": 21.2292947813043,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Baroque_Palace%2C_Timi%C8%99oara%2C_August_2022.jpg",
+    "photo": "/photos/spot-6.jpg",
     "attribution": "Photo: Vacant0 — CC BY-SA 4.0",
     "facts": [
       "The museum is housed in the impressive Baroque Palace, originally built in the 18th century and later renovated.",
@@ -93,7 +93,7 @@
     "name": "Trajan Square (Piața Traian)",
     "lat": 45.75784335526926,
     "lng": 21.249955794839813,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/81/Pia%C8%9Ba_Traian%2C_Timi%C8%99oara_%282023%29_-_img_06.jpg",
+    "photo": "/photos/spot-7.jpg",
     "attribution": "Photo: Chainwit. — CC BY 4.0",
     "facts": [
       "Piața Traian was designed in the 18th century as the central square of the Fabric neighborhood, an area that developed as an important commercial and industrial center.",
@@ -107,7 +107,7 @@
     "name": "Millennium Catholic Church (Biserica Millennium)",
     "lat": 45.7568163080267,
     "lng": 21.247734867449946,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/0/09/Biserica_Romano-catolic%C4%83_Millenium%2C_Timi%C8%99oara_%282023%29_-_img_02.jpg",
+    "photo": "/photos/spot-8.jpg",
     "attribution": "Photo: Chainwit. — CC BY 4.0",
     "facts": [
       "The church was founded in 1896, when its foundation stone was laid on October 4.",
@@ -122,7 +122,7 @@
     "name": "Neptune Palace (Palatul Neptun)",
     "lat": 45.756749538754235,
     "lng": 21.24192738374784,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Timi%C8%99oara_-_Palatul_Neptun_%2830952906788%29.jpg",
+    "photo": "/photos/spot-9.jpg",
     "attribution": "Photo: Fred Romero — CC BY 2.0",
     "facts": [
       "Built between 1912 and 1914, the building was initially known as Hungária Fürdő.",
@@ -137,7 +137,7 @@
     "name": "Fabric Synagogue (Sinagoga din Fabric)",
     "lat": 45.756434541072096,
     "lng": 21.24548539724064,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/92/Sinagoga_din_Fabric_Timi%C8%99oara_%282023%29_-_IMG_01.jpg",
+    "photo": "/photos/spot-10.jpg",
     "attribution": "Photo: Chainwit. — CC BY-SA 4.0",
     "facts": [
       "The synagogue was designed by architect Lipót Baumhorn and constructed between 1897 and 1899.",
@@ -152,7 +152,7 @@
     "name": "Roman's Square (Piața Romanilor)",
     "lat": 45.757289295793946,
     "lng": 21.247523753062893,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Timisoara%2C_Piata_Romanilor_12.jpg",
+    "photo": "/photos/spot-11.jpg",
     "attribution": "Photo: Turbojet — CC BY-SA 4.0",
     "facts": [
       "Piața Romanilor is one of the historic squares of the Fabric district, developing as an important urban space connecting the historic neighborhood with the rest of the city.",
@@ -167,7 +167,7 @@
     "name": "Saint Mary's Square (Piața Sfânta Maria)",
     "lat": 45.74875096422616,
     "lng": 21.219041983747083,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/63/Pia%C8%9Ba_Sf%C3%A2nta_Maria%2C_Timi%C8%99oara_%282023%29.jpg",
+    "photo": "/photos/spot-12.jpg",
     "attribution": "Photo: Chainwit. — CC BY 4.0",
     "facts": [
       "The nearby Reformed Church on Timotei Cipariu Street was the starting point of the protests on December 16, 1989, which marked the beginning of the Romanian Revolution in Timișoara.",
@@ -182,7 +182,7 @@
     "name": "Water Palace (Palatul Apelor)",
     "lat": 45.74937124281111,
     "lng": 21.219329908885854,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/73/Timisoara%2C_Palatul_Apelor_2018_%282%29.jpg",
+    "photo": "/photos/spot-13.jpg",
     "attribution": "Photo: Turbojet — CC BY-SA 4.0",
     "facts": [
       "Completed in 1901, the building originally served as the headquarters of the Timiș–Bega Water Management Company, which was responsible for managing waterways and water-related works in the region.",
@@ -196,7 +196,7 @@
     "name": "Iosefin Water Tower (Turnul de apă din Iosefin)",
     "lat": 45.745514290316045,
     "lng": 21.20147498004976,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Iosefin_Water_Tower_2026.jpg",
+    "photo": "/photos/spot-14.jpg",
     "attribution": "Photo: Irimia florin — CC BY-SA 4.0",
     "facts": [
       "Completed in 1914, the tower was part of Timișoara's water distribution system.",
@@ -210,7 +210,7 @@
     "name": "Timișoara North Railway Station (Gara de Nord)",
     "lat": 45.750467348874295,
     "lng": 21.207235827924848,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Gara_de_Nord_-_panoramio_%283%29.jpg",
+    "photo": "/photos/spot-15.jpg",
     "attribution": "Photo: Mister No — CC BY 3.0",
     "facts": [
       "The first railway line connecting Timișoara to the European railway network opened on November 15, 1857.",
@@ -224,7 +224,7 @@
     "name": "Decebal Bridge (Podul Decebal)",
     "lat": 45.756169355973455,
     "lng": 21.240757908885705,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Podul_Decebal%2C_Timi%C8%99oara_%282023%29_-_img_03.jpg",
+    "photo": "/photos/spot-16.jpg",
     "attribution": "Photo: Chainwit. — CC BY 4.0",
     "facts": [
       "Built between 1908 and 1909, it was considered one of the most impressive reinforced-concrete beam bridges in Europe at the time.",
@@ -238,7 +238,7 @@
     "name": "Mihai Viteazu Bridge (Podul Mihai Viteazu)",
     "lat": 45.74852163144266,
     "lng": 21.226045766003864,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Sta%C8%9Bia_Catedrala_Mitropolitan%C4%83.jpg",
+    "photo": "/photos/spot-17.jpg",
     "attribution": "Photo: Mihai mircea moise — CC BY-SA 4.0",
     "facts": [
       "A wooden bridge existed at this location before the mid-19th century and appears on an 1853 map of Timișoara under the name Bischofsbrücke (Bishop's Bridge).",
@@ -253,7 +253,7 @@
     "name": "Maria Bridge (Podul Maria)",
     "lat": 45.74985073798616,
     "lng": 21.220730637057304,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/0/05/Timi%C8%99oara%2C_podul_Traian%2C_1.jpeg",
+    "photo": "/photos/spot-18.jpeg",
     "attribution": "Photo: Aisano — CC BY-SA 3.0 / 2.5 / 2.0 / 1.0",
     "facts": [
       "The current Podul Traian, also historically known as Podul Huniade or Podul de la Maria, was designed by architect Elemér Wachtel.",
@@ -268,7 +268,7 @@
     "name": "Bega River Promenade (Faleza Bega)",
     "lat": 45.7501299442172,
     "lng": 21.217905073492247,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/68/2009-08-05_-_panoramio.jpg",
+    "photo": "/photos/spot-19.jpg",
     "attribution": "Photo: Валерий Дед — CC BY 3.0",
     "facts": [
       "The Bega Canal was developed in the 18th century, starting in 1728, to control flooding and facilitate the transportation of goods, including timber.",
@@ -283,7 +283,7 @@
     "name": "Rose Park (Parcul Rozelor)",
     "lat": 45.75043974037452,
     "lng": 21.232469683747095,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/40/Parcul_Rozelor_Timisoara_-_roses.jpg",
+    "photo": "/photos/spot-20.jpg",
     "attribution": "Photo: Turbojet — CC BY-SA 4.0",
     "facts": [
       "The park was inaugurated on July 19, 1891, during the Industrial and Agricultural Exhibition in Timișoara.",
@@ -298,7 +298,7 @@
     "name": "Botanical Park (Parcul Botanic)",
     "lat": 45.760308547644335,
     "lng": 21.225280039570208,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Botanischer_Garten-Temeswar.JPG/960px-Botanischer_Garten-Temeswar.JPG",
+    "photo": "/photos/spot-21.jpg",
     "attribution": "Photo: Eli.P — CC BY-SA 3.0 / 2.5 / 2.0 / 1.0",
     "facts": [
       "The first design for the park was created in 1966 by architect Silvia Grumeza.",
@@ -313,7 +313,7 @@
     "name": "Anton von Scudier Central Park (Parcul Central „Anton von Scudier”)",
     "lat": 45.75136670670819,
     "lng": 21.220267241418536,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Timisoara%2C_Parcul_Scudier_2019.jpg",
+    "photo": "/photos/spot-22.jpg",
     "attribution": "Photo: Turbojet — CC BY-SA 4.0",
     "facts": [
       "Established in 1880 by order of General Anton von Scudier, the park was created on the site of a former military and civilian cemetery that had been closed in the 18th century.",
@@ -327,7 +327,7 @@
     "name": "Ion Creangă Children's Park (Parcul Copiilor Ion Creangă)",
     "lat": 45.75311313685436,
     "lng": 21.2372640567605,
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Parcul_Copiilor_-_panoramio_%286%29.jpg",
+    "photo": "/photos/spot-23.jpg",
     "attribution": "Photo: Mister No — CC BY 3.0",
     "facts": [
       "The park's development began in 1858 under the name Franz Joseph Park, with the initial landscaping completed in 1891.",
