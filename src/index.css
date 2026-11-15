@@ -1,18 +1,22 @@
+
 /* =====================================================
-   TimiGuessr - index.css (Membrul C)
-   Fără clase: ecranele sunt recunoscute după structură,
-   pentru că B nu folosește className în componente.
+   TimiGuessr - index.css
+   Stilizare generală și compatibilitate Leaflet
    ===================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600;700&display=swap");
 
-/* ----- Culori și fonturi: schimbi doar aici ----- */
+
+/* =====================================================
+   CULORI ȘI FONTURI
+   ===================================================== */
+
 :root {
-  --culoare-accent: #C8553D;        /* terracotta */
-  --culoare-accent-inchis: #A8432E; /* la hover */
-  --culoare-fundal: #F6EFE3;        /* crem */
+  --culoare-accent: #C8553D;
+  --culoare-accent-inchis: #A8432E;
+  --culoare-fundal: #F6EFE3;
   --culoare-card: #FFFFFF;
-  --culoare-text: #2B2118;          /* maro închis */
+  --culoare-text: #2B2118;
   --culoare-text-slab: #6B5B4D;
   --culoare-bordura: #EADFCF;
   --umbra: 0 4px 16px rgba(43, 33, 24, 0.1);
@@ -21,8 +25,14 @@
   --font-text: "Inter", system-ui, sans-serif;
 }
 
-/* ----- Baza ----- */
-* { box-sizing: border-box; }
+
+/* =====================================================
+   BAZA
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -39,10 +49,18 @@ body {
   padding: 16px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-titlu);
   margin-top: 0;
 }
+
+
+/* =====================================================
+   BUTOANE
+   ===================================================== */
 
 button {
   background: var(--culoare-accent);
@@ -56,11 +74,21 @@ button {
   cursor: pointer;
   transition: transform 0.1s, background 0.2s, opacity 0.2s;
 }
+
 button:hover:not(:disabled) {
   background: var(--culoare-accent-inchis);
   transform: translateY(-1px);
 }
-button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   INPUTURI
+   ===================================================== */
 
 input {
   padding: 10px 14px;
@@ -71,10 +99,30 @@ input {
   font-family: var(--font-text);
   font-size: 1rem;
 }
-input:focus { outline: 3px solid rgba(200, 85, 61, 0.3); }
 
-img { border-radius: 12px; display: block; }
-em { color: var(--culoare-text-slab); }
+input:focus {
+  outline: 3px solid rgba(200, 85, 61, 0.3);
+}
+
+
+/* =====================================================
+   IMAGINI GENERALE
+   IMPORTANT: NU MODIFICĂM IMAGINILE LEAFLET!
+   ===================================================== */
+
+img:not(.leaflet-tile):not(.leaflet-marker-icon):not(.leaflet-image-layer) {
+  border-radius: 12px;
+  display: block;
+}
+
+em {
+  color: var(--culoare-text-slab);
+}
+
+
+/* =====================================================
+   HARTA LEAFLET
+   ===================================================== */
 
 .leaflet-container {
   width: 100%;
@@ -82,7 +130,33 @@ em { color: var(--culoare-text-slab); }
   border-radius: 12px;
 }
 
-/* ===== Orice ecran = un card centrat (reveal, rezultate) ===== */
+/* Păstrăm dimensiunile originale ale dalelor hărții */
+.leaflet-container img.leaflet-tile {
+  max-width: none !important;
+  max-height: none !important;
+  border-radius: 0 !important;
+  display: block;
+  object-fit: fill;
+}
+
+/* Nu aplicăm stilurile generale peste iconițele Leaflet */
+.leaflet-container img.leaflet-marker-icon,
+.leaflet-container img.leaflet-marker-shadow,
+.leaflet-container img.leaflet-image-layer {
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* Controalele hărții */
+.leaflet-control-zoom {
+  z-index: 1000;
+}
+
+
+/* =====================================================
+   CARDURI GENERALE
+   ===================================================== */
+
 #root > div {
   max-width: 760px;
   margin: 24px auto;
@@ -92,19 +166,33 @@ em { color: var(--culoare-text-slab); }
   box-shadow: var(--umbra);
 }
 
-#root > div > button { margin-top: 12px; }
+#root > div > button {
+  margin-top: 12px;
+}
 
-/* Poza din cardul de reveal */
+
+/* =====================================================
+   POZA DIN CARDUL DE REVEAL
+   ===================================================== */
+
 #root > div > img {
   width: 100%;
   height: 38vh;
-  max-width: 100% !important;   /* !important: bate stilul inline al lui B */
+  max-width: 100% !important;
   object-fit: cover;
   margin-bottom: 16px;
 }
 
-/* Lista de fapte din reveal / rezultate */
-#root > div ul { padding-left: 0; list-style: none; }
+
+/* =====================================================
+   LISTA DE FAPTE
+   ===================================================== */
+
+#root > div ul {
+  padding-left: 0;
+  list-style: none;
+}
+
 #root > div ul li {
   background: var(--culoare-fundal);
   border-radius: 10px;
@@ -112,44 +200,39 @@ em { color: var(--culoare-text-slab); }
   margin-bottom: 8px;
 }
 
-/* ===== ECRANUL DE START (are un <h1>) ===== */
+
+/* =====================================================
+   ECRANUL DE START
+   ===================================================== */
+
 #root > div:has(> h1) {
   text-align: center;
   padding: 56px 24px;
 }
+
 #root > div:has(> h1) h1 {
   font-size: 3.6rem;
   color: var(--culoare-accent);
   margin-bottom: 8px;
 }
+
 #root > div:has(> h1) > p {
   font-size: 1.15rem;
   color: var(--culoare-text-slab);
   max-width: 480px;
   margin: 0 auto 28px;
 }
+
 #root > div:has(> h1) > button {
   font-size: 1.2rem;
   padding: 16px 56px;
 }
 
-/* ===== Logo: pin de hartă deasupra titlului (doar pe ecranul de start) ===== */
-#root > div:has(> h1) h1::before {
-  content: "";
-  display: block;
-  width: 72px;                 /* mărimea logo-ului: schimbi aici */
-  height: 72px;
-  margin: 0 auto 12px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 4C20 4 11 13 11 25c0 16 21 35 21 35s21-19 21-35C53 13 44 4 32 4z' fill='%23C8553D'/%3E%3Ccircle cx='32' cy='25' r='9' fill='%23F6EFE3'/%3E%3C/svg%3E") center / contain no-repeat;
-  animation: pin-sare 2.4s ease-in-out infinite;  
-}
 
-@keyframes pin-sare {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
+/* =====================================================
+   LEADERBOARD
+   ===================================================== */
 
-/* ===== Leaderboard (apare pe start și pe rezultate) ===== */
 #root > div > div:has(> h3) {
   background: var(--culoare-fundal);
   border-radius: 14px;
@@ -158,10 +241,22 @@ em { color: var(--culoare-text-slab); }
   max-width: 420px;
   text-align: left;
 }
-#root > div > div:has(> h3) ol { padding-left: 1.4rem; margin: 0; }
-#root > div > div:has(> h3) li { padding: 4px 0; background: none; }
 
-/* ===== ECRANUL DE RUNDĂ (conține harta) ===== */
+#root > div > div:has(> h3) ol {
+  padding-left: 1.4rem;
+  margin: 0;
+}
+
+#root > div > div:has(> h3) li {
+  padding: 4px 0;
+  background: none;
+}
+
+
+/* =====================================================
+   ECRANUL DE RUNDĂ
+   ===================================================== */
+
 #root > div:has(.leaflet-container) {
   max-width: none;
   margin: 0;
@@ -169,12 +264,12 @@ em { color: var(--culoare-text-slab); }
   background: transparent;
   box-shadow: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;   /* poza stânga, harta dreapta */
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   align-items: start;
 }
 
-/* Bara de sus: "Round 1/5 — ⏱ 60s" */
+/* Bara de sus */
 #root > div:has(.leaflet-container) > p {
   grid-column: 1 / -1;
   margin: 0;
@@ -186,54 +281,111 @@ em { color: var(--culoare-text-slab); }
   font-weight: 600;
 }
 
+/* Fotografia locației */
 #root > div:has(.leaflet-container) > img {
   height: 62vh;
   margin: 0;
   box-shadow: var(--umbra);
+  width: 100%;
+  object-fit: cover;
 }
 
+/* Containerul hărții */
 #root > div:has(.leaflet-container) .leaflet-container {
-  height: 62vh;                      /* aceeași înălțime cu poza */
+  height: 62vh;
+  min-height: 320px;
   box-shadow: var(--umbra);
 }
 
-/* ===== ECRANUL DE REZULTATE ===== */
-/* Fiecare spot din "tour" (div cu stil inline) */
-#root > div > div[style] {
+
+/* =====================================================
+   ECRANUL DE REZULTATE
+   ===================================================== */
+
+/* Elementele cu stil inline din rezultate.
+   Excludem ecranul de rundă pentru a nu afecta harta. */
+
+#root > div:not(:has(.leaflet-container)) > div[style] {
   border-bottom: 1px solid var(--culoare-bordura);
   padding-bottom: 16px;
 }
-#root > div > div[style] img {
+
+/* Imaginile din rezultate, fără dalele Leaflet */
+
+#root > div:not(:has(.leaflet-container)) > div[style] img:not(.leaflet-tile):not(.leaflet-marker-icon):not(.leaflet-image-layer) {
   width: 100%;
   max-width: 100% !important;
   max-height: 260px;
   object-fit: cover;
 }
 
-/* Formularul cu nickname */
+
+/* =====================================================
+   FORMULAR NICKNAME
+   ===================================================== */
+
 form {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   margin: 16px 0;
 }
-form input { flex: 1; min-width: 160px; }
 
-/* ===== MOBIL (sub 700px): totul una sub alta ===== */
+form input {
+  flex: 1;
+  min-width: 160px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBIL
+   ===================================================== */
+
 @media (max-width: 700px) {
-  #root { padding: 8px; }
-  #root > div { padding: 18px; margin: 12px auto; }
 
-  #root > div:has(> h1) h1 { font-size: 2.6rem; }
-  #root > div:has(> h1) > button { width: 100%; padding: 16px; }
+  #root {
+    padding: 8px;
+  }
+
+  #root > div {
+    padding: 18px;
+    margin: 12px auto;
+  }
+
+  /* Ecran start */
+
+  #root > div:has(> h1) h1 {
+    font-size: 2.6rem;
+  }
+
+  #root > div:has(> h1) > button {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* Ecran rundă */
 
   #root > div:has(.leaflet-container) {
     grid-template-columns: 1fr;
     padding: 0;
   }
-  #root > div:has(.leaflet-container) > img { height: 32vh; }
-  #root > div:has(.leaflet-container) .leaflet-container { height: 46vh; }
 
-  #root > div > img { height: 28vh; }
-  button { width: 100%; }
+  #root > div:has(.leaflet-container) > img {
+    height: 32vh;
+  }
+
+  #root > div:has(.leaflet-container) .leaflet-container {
+    height: 46vh;
+    min-height: 320px;
+  }
+
+  /* Alte imagini */
+
+  #root > div > img {
+    height: 28vh;
+  }
+
+  button {
+    width: 100%;
+  }
 }
